@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "country": "United States of America",
+      "description": "Project in the USA. Exploring innovations in energy.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "country": "Brazil",
+      "description": "Environmental conservation project in the Amazon.",
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+}
