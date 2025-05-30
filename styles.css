@@ -33,4 +33,17 @@ html, body, #map {
   display: block; /* Shown only when active */
 }
 
+/* Ensure #map-container fills the screen when fullscreen */
+.leaflet-container:fullscreen #map-container,
+#map-container:fullscreen {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Optional: in fullscreen, make #info-panel scroll properly */
+#map-container:fullscreen #info-panel {
+  overflow-y: auto;
+}
 
