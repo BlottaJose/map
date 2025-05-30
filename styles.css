@@ -10,3 +10,21 @@ html, body, #map {
 .leaflet-container {
   background: #eee;
 }
+
+#map-container {
+  display: flex;
+  height: 100vh;
+}
+
+#map {
+  flex: 1;
+}
+
+#info-panel {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+
