@@ -25,12 +25,12 @@ html, body, #map {
   padding: 20px;
   overflow-y: auto;
   background-color: #f9f9f9;
+  transition: all 0.3s ease;
   display: none; /* Hidden by default */
 }
 
 #info-panel.active {
   display: block; /* Shown only when active */
 }
-
 
 
