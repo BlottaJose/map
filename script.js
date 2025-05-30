@@ -1,5 +1,3 @@
-// script.js
-
 // Initialize the map centered on the world
 var map = L.map('map', {
   fullscreenControl: true
@@ -28,52 +26,35 @@ fetch('projects.json')
             const cname = feature.properties.name;
             if (projectsByCountry[cname]) {
               return {
-                color: '#3388ff',
-                weight: 2,
+                color: 'transparent',         // no border
+                weight: 0,
                 fillColor: '#ffeeaa',
                 fillOpacity: 0.5
               };
             }
             return {
-              color: '#999',
-              weight: 1,
-              fillOpacity: 0
+              color: 'transparent',         // no border
+              weight: 0,
+              fillColor: '#dddddd',
+              fillOpacity: 0.1
             };
           },
           onEachFeature: (feature, layer) => {
             const cname = feature.properties.name;
-            if (projectsByCountry[cname]) {
+            layer.on('click', () => {
+              const panel = document.getElementById('info-panel');
               const proj = projectsByCountry[cname];
-              let popupHtml = `<strong>${cname}</strong><br>`;
-              if (proj.image) {
-                popupHtml += `<img src="${proj.image}" style="width:100px;"><br>`;
+              if (proj) {
+                panel.innerHTML = `
+                  <h2>${proj.name}</h2>
+                  ${proj.image ? `<img src="${proj.image}" style="width:100%;max-width:300px;"><br>` : ''}
+                  <p>${proj.description || 'No description available.'}</p>
+                `;
+              } else {
+                panel.innerHTML = `<h2>${cname}</h2><p>No project information available.</p>`;
               }
-              popupHtml += proj.description || '';
-              layer.bindPopup(popupHtml);
-            }
+            });
           }
         }).addTo(map);
       });
   });
-
-
-function onEachFeature(feature, layer) {
-  layer.on('click', function () {
-    const countryName = feature.properties.name;
-    const project = projects.find(p => p.country === countryName);
-    const panel = document.getElementById('info-panel');
-    if (project) {
-      panel.innerHTML = `
-        <h2>${project.name}</h2>
-        <p>${project.description}</p>
-      `;
-    } else {
-      panel.innerHTML = `<p>No project information available for ${countryName}.</p>`;
-    }
-  });
-}
-
-L.geoJSON(geojsonData, {
-  onEachFeature: onEachFeature
-}).addTo(map);
-
