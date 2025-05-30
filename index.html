@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Leaflet Projects Map</title>
-  <!-- Ensure mobile scaling/pinch works -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Leaflet CSS (from CDN) -->
+  
+  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <!-- Fullscreen plugin CSS (via Mapbox CDN) -->
+  
+  <!-- Fullscreen plugin CSS -->
   <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" />
-  <!-- Your custom styles -->
+  
+  <!-- Custom styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Map container -->
-  <div id="map"></div>
+  <!-- Map and Info Panel Container -->
+  <div id="map-container">
+    <div id="map"></div>
+    <div id="info-panel"></div>
+  </div>
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <!-- Fullscreen plugin JS (Mapbox CDN) -->
+  
+  <!-- Fullscreen plugin JS -->
   <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
-  <!-- Your map logic -->
+  
+  <!-- Your custom script -->
   <script src="script.js"></script>
 </body>
-
-<div id="map-container">
-  <div id="map"></div>
-  <div id="info-panel"></div>
-</div>
-
-
 </html>
+
