@@ -55,3 +55,25 @@ fetch('projects.json')
         }).addTo(map);
       });
   });
+
+
+function onEachFeature(feature, layer) {
+  layer.on('click', function () {
+    const countryName = feature.properties.name;
+    const project = projects.find(p => p.country === countryName);
+    const panel = document.getElementById('info-panel');
+    if (project) {
+      panel.innerHTML = `
+        <h2>${project.name}</h2>
+        <p>${project.description}</p>
+      `;
+    } else {
+      panel.innerHTML = `<p>No project information available for ${countryName}.</p>`;
+    }
+  });
+}
+
+L.geoJSON(geojsonData, {
+  onEachFeature: onEachFeature
+}).addTo(map);
+
