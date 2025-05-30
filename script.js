@@ -1,6 +1,11 @@
+// Initialize the map with fullscreen targeting #map-container
 var map = L.map('map', {
-  fullscreenControl: true
+  fullscreenControl: true,
+  fullscreenControlOptions: {
+    container: document.getElementById('map-container')
+  }
 }).setView([20, 0], 2);
+
 
 // Borderless basemap
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
