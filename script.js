@@ -1,6 +1,5 @@
 // Initialize the map with fullscreen targeting #map-container
 var map = L.map('map', {
-  fullscreenControl: true,
   fullscreenControlOptions: {
     container: document.getElementById('map-container')
   }
