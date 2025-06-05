@@ -66,3 +66,21 @@ fetch('projects.json')
       panel.classList.remove('active');
     });
   });
+
+// Custom fullscreen logic for #map-container
+document.getElementById('custom-fullscreen-btn').addEventListener('click', () => {
+  const container = document.getElementById('map-container');
+  if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+    if (container.requestFullscreen) {
+      container.requestFullscreen();
+    } else if (container.webkitRequestFullscreen) {
+      container.webkitRequestFullscreen(); // Safari
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen(); // Safari
+    }
+  }
+});
