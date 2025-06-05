@@ -9,6 +9,11 @@
       "country": "Brazil",
       "description": "Environmental conservation project in the Amazon.",
       "image": "https://via.placeholder.com/150"
+    },
+    {
+      "country": "Colombia",
+      "description": "Ai supporting climate change mitigation.",
+      "image": "images/colombia.jpg"
     }
   ]
 }
