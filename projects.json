@@ -2,14 +2,17 @@
   "projects": [
     {
       "country": "Madagascar",
+      "description": " ",
       "image": "images/Madagascar.jpg"
     },
     {
       "country": "Italy",
+      "description": " ",
       "image": "images/Migration.jpg"
     },
     {
       "country": "Colombia",
+      "description": " ",
       "image": "images/colombia.jpg"
     }
   ]
