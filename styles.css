@@ -10,6 +10,29 @@ html, body, #map {
 .leaflet-container {
   background: #eee;
 }
+
+#map-container {
+  display: flex;
+  height: 100vh;
+}
+
+#map {
+  flex: 1;
+}
+
+#info-panel {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  display: none; /* Hidden by default */
+}
+
+#info-panel.active {
+  display: block; /* Shown only when active */
+}
+
 /* Ensure #map-container fills the screen when fullscreen */
 .leaflet-container:fullscreen #map-container,
 #map-container:fullscreen {
@@ -24,4 +47,29 @@ html, body, #map {
   overflow-y: auto;
 }
 
+#custom-fullscreen-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
+/* Fullscreen styles */
+#map-container:fullscreen {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+
+#map-container:-webkit-full-screen { /* Safari */
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
