@@ -1,14 +1,19 @@
 {
   "projects": [
     {
-      "country": "United States of America",
-      "description": "Project in the USA. Exploring innovations in energy.",
-      "image": "images/Logo.jpg"
+      "country": "Madagascar",
+      "description": " ",
+      "image": "images/Madagascar.jpg"
     },
     {
-      "country": "Brazil",
-      "description": "Environmental conservation project in the Amazon.",
-      "image": "https://via.placeholder.com/150"
+      "country": "Italy",
+      "description": " ",
+      "image": "images/Migration.jpg"
+    },
+    {
+      "country": "Colombia",
+      "description": " ",
+      "image": "images/colombia.jpg"
     }
   ]
 }
