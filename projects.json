@@ -44,6 +44,16 @@
       "country": "Sweden",
       "description": " ",
       "image": "images/renew.png"
+    },
+    {
+      "country": "Ethiopia",
+      "description": " ",
+      "image": "images/ethiopia.png"
+    },
+    {
+      "country": "Mali",
+      "description": " ",
+      "image": "images/africans.png"
     }
     
   ]
