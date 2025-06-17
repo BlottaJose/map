@@ -18,8 +18,11 @@ fetch('projects.json')
   .then(res => res.json())
   .then(projectData => {
     projectData.projects.forEach(p => {
-      projectsByCountry[p.country] = p;
-    });
+    if (!projectsByCountry[p.country]) {
+    projectsByCountry[p.country] = [];
+  }
+  projectsByCountry[p.country].push(p);
+});
 
     return fetch('https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson');
   })
@@ -41,13 +44,22 @@ fetch('projects.json')
           L.DomEvent.stopPropagation(e); // prevent triggering map click
 
           const panel = document.getElementById('info-panel');
-          const proj = projectsByCountry[cname];
-          if (proj) {
-            panel.innerHTML = `
-              <h2>${cname}</h2>
+         const projList = projectsByCountry[cname];
+          if (projList && projList.length) {
+            panel.innerHTML = `<h2>${cname}</h2>`;
+            projList.forEach(proj => {
+            panel.innerHTML += `
+              <div class="project-entry" style="margin-bottom: 20px;">
               ${proj.image ? `<img src="${proj.image}" style="max-width: 100%; height: auto;"><br>` : ''}
               <p>${proj.description}</p>
-            `;
+            </div>
+          `;
+         });
+          panel.classList.add('active');
+        } else {
+          panel.innerHTML = `<h2>${cname}</h2><p>No project information available.</p>`;
+          panel.classList.add('active');
+        }
             panel.classList.add('active');
           } else {
             panel.innerHTML = `<h2>${cname}</h2><p>No project information available.</p>`;
