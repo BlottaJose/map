@@ -3,12 +3,12 @@
     {
       "country": "Madagascar",
       "description": " ",
-      "image": "images/madagascar.png"
+      "image": "images/madagscar.png"
     },
     {
       "country": "Italy",
       "description": " ",
-      "image": "images/italy.jpg"
+      "image": "images/migration.png"
     },
     {
       "country": "Colombia",
@@ -18,12 +18,32 @@
     {
       "country": "India",
       "description": " ",
-      "image": "images/indiatest.png"
+      "image": "images/india1.png"
     },
     {
       "country": "China",
       "description": " ",
-      "image": "images/chinatest.png"
+      "image": "images/china.png"
+    },
+    {
+      "country": "Brazil",
+      "description": " ",
+      "image": "images/brazil1.png"
+    },
+    {
+      "country": "Nigeria",
+      "description": " ",
+      "image": "images/nigeria.png"
+    },
+    {
+      "country": "Germany",
+      "description": " ",
+      "image": "images/germany.png"
+    },
+    {
+      "country": "Sweden",
+      "description": " ",
+      "image": "images/renew.png"
     }
     
   ]
