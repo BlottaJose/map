@@ -1,7 +1,5 @@
 // Initialize the map with fullscreen targeting #map-container
-var map = L.map('map', {
-  fullscreenControl: true // You need this to enable the control
-}).setView([20, 0], 2);
+var map = L.map('map').setView([20, 0], 2);
 
 // Borderless basemap
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
