@@ -89,6 +89,56 @@
       "country": "Mexico",
       "description": " ",
       "image": "images/paul.png"
+    },
+    {
+      "country": "Lybia",
+      "description": " ",
+      "image": "images/tunisia.png"
+    },
+    {
+      "country": "Egypt",
+      "description": " ",
+      "image": "images/african.png"
+    },
+    {
+      "country": "Ghana",
+      "description": " ",
+      "image": "images/african.png"
+    },
+    {
+      "country": "Kenya",
+      "description": " ",
+      "image": "images/african.png"
+    },
+    {
+      "country": "Tanzania",
+      "description": " ",
+      "image": "images/african.png"
+    },
+    {
+      "country": "Zambia",
+      "description": " ",
+      "image": "images/african.png"
+    },
+    {
+      "country": "Mozambique",
+      "description": " ",
+      "image": "images/african.png"
+    },
+    {
+      "country": "Ethiopia",
+      "description": " ",
+      "image": "images/uganda.png"
+    },
+    {
+      "country": "Spain",
+      "description": " ",
+      "image": "images/paul.png"
+    },
+    {
+      "country": "Italy",
+      "description": " ",
+      "image": "images/paul.png"
     }
     
   ]
