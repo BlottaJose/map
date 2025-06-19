@@ -32,7 +32,7 @@ fetch('projects.json')
 
         const hasProject = projectsByCountry[cname];
         return {
-          color: hasProject ? '#222' : 'dark', // Border color
+          color: hasProject ? '#333' : 'transparent', // Border color
           weight: hasProject ? 1.5 : 0,               // Border thickness
           fillColor: hasProject ? '#facc15' : '#e5e7eb', // Yellow highlight / gray background
           fillOpacity: hasProject ? 0.8 : 0.1
