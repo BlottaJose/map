@@ -33,7 +33,7 @@ fetch('projects.json')
         const hasProject = projectsByCountry[cname];
         return {
           color: hasProject ? '#333' : 'transparent', // Border color
-          weight: hasProject ? 1.5 : 0,               // Border thickness
+          weight: hasProject ? 1.0 : 0,               // Border thickness
           fillColor: hasProject ? '#facc15' : '#e5e7eb', // Yellow highlight / gray background
           fillOpacity: hasProject ? 0.8 : 0.1
         };
@@ -42,7 +42,7 @@ fetch('projects.json')
       onEachFeature: (feature, layer) => {
         const cname = feature.properties.name;
         layer.on('click', (e) => {
-          L.DomEvent.stopPropagation(e); // prevent map click
+          L.DomEvent.stopPropagation(e); // prevent base map click
 
           const panel = document.getElementById('info-panel');
           const projList = projectsByCountry[cname];
@@ -50,18 +50,17 @@ fetch('projects.json')
           if (projList && projList.length) {
             panel.innerHTML = `<h2>${cname}</h2>`;
             projList.forEach(proj => {
-              panel.innerHTML += `
+            panel.innerHTML += `
                 <div class="project-entry" style="margin-bottom: 20px;">
-                  ${proj.image ? `<img src="${proj.image}" style="max-width: 100%; height: auto;"><br>` : ''}
-                  <p>${proj.description}</p>
-                </div>
+                ${proj.image ? `<img src="${proj.image}" style="max-width: 100%; height: auto;"><br>` : ''}
+                <p>${proj.description}</p>
+              </div>
               `;
             });
-          } else {
-            panel.innerHTML = `<h2>${cname}</h2><p>No project information available.</p>`;
-          }
-
           panel.classList.add('active');
+          } else {
+          panel.classList.remove('active'); // 
+          }
         });
       }
     });
