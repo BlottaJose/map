@@ -32,10 +32,10 @@ fetch('projects.json')
 
         const hasProject = projectsByCountry[cname];
         return {
-          color: hasProject ? '#333' : 'transparent', // Border color
-          weight: hasProject ? 1.0 : 0,               // Border thickness
-          fillColor: hasProject ? '#facc15' : '#e5e7eb', // Yellow highlight / gray background
-          fillOpacity: hasProject ? 0.8 : 0.1
+          color: hasProject ? '#555' : 'transparent', // Border color
+          weight: hasProject ? 0.6 : 0,               // Border thickness
+          fillColor: hasProject ? '#fde68a' : '#f5f5f5', // soft amber / light gray
+          fillOpacity: hasProject ? 0.6 : 0.1
         };
       }
         ,
