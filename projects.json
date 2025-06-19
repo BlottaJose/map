@@ -6,9 +6,9 @@
       "image": "images/madagscar.png"
     },
     {
-      "country": "Italy",
+      "country": "Tunisia",
       "description": " ",
-      "image": "images/migration.png"
+      "image": "images/tunisia.png"
     },
     {
       "country": "Colombia",
@@ -84,6 +84,11 @@
       "country": "Germany",
       "description": " ",
       "image": "images/migration2.png"
+    },
+    {
+      "country": "Germany",
+      "description": " ",
+      "image": "images/paul.png"
     }
     
   ]
