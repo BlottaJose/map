@@ -69,6 +69,16 @@
       "country": "India",
       "description": " ",
       "image": "images/india2.png"
+    },
+    {
+      "country": "Uganda",
+      "description": " ",
+      "image": "images/uganda.png"
+    },
+    {
+      "country": "United States",
+      "description": " ",
+      "image": "images/aidcuts.png"
     }
     
   ]
