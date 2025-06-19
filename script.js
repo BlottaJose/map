@@ -29,13 +29,16 @@ fetch('projects.json')
     const geoLayer = L.geoJSON(geojson, {
       style: feature => {
         const cname = feature.properties.name;
+
+        const hasProject = projectsByCountry[cname];
         return {
-          color: 'transparent',
-          weight: 0,
-          fillColor: projectsByCountry[cname] ? '#ffeeaa' : '#dddddd',
-          fillOpacity: projectsByCountry[cname] ? 0.6 : 0.1
+          color: hasProject ? '#222' : 'dark', // Border color
+          weight: hasProject ? 1.5 : 0,               // Border thickness
+          fillColor: hasProject ? '#facc15' : '#e5e7eb', // Yellow highlight / gray background
+          fillOpacity: hasProject ? 0.8 : 0.1
         };
-      },
+      }
+        ,
       onEachFeature: (feature, layer) => {
         const cname = feature.properties.name;
         layer.on('click', (e) => {
