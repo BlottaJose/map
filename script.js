@@ -11,7 +11,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png
 let projectsByCountry = {};
 
 // Load project and GeoJSON data
-fetch('projects.json')
+return fetch('countries.geojson');
   .then(res => res.json())
   .then(projectData => {
     // Group projects by country
