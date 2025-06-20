@@ -49,14 +49,16 @@ fetch('projects.json')
 
           if (projList && projList.length) {
             panel.innerHTML = `<h2>${cname}</h2>`;
-            projList.forEach(proj => {
-            panel.innerHTML += `
-                <div class="project-entry" style="margin-bottom: 20px;">
+            projList.forEach((proj, index) => {
+              panel.innerHTML += `
+              <div class="project-entry" style="margin-bottom: 20px;">
                 ${proj.image ? `<img src="${proj.image}" style="max-width: 100%; height: auto;"><br>` : ''}
-                <p>${proj.description}</p>
+                ${proj.description ? `<p>${proj.description}</p>` : ''}
               </div>
-              `;
-            });
+              ${index < projList.length - 1 ? '<hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">' : ''}
+            `;
+          });
+
           panel.classList.add('active');
           } else {
           panel.classList.remove('active'); // 
