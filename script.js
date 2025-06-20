@@ -55,7 +55,15 @@ fetch('projects.json')
                 ${proj.image ? `<img src="${proj.image}" style="max-width: 100%; height: auto;"><br>` : ''}
                 ${proj.description ? `<p>${proj.description}</p>` : ''}
               </div>
-              ${index < projList.length - 1 ? '<hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">' : ''}
+              ${index < projList.length - 1 ? `
+                <hr style="
+                border: 0;
+                border-top: 3px solid #3b82f6;
+                margin: 30px auto;
+                width: 80%;
+                ">
+              ` : ''}
+
             `;
           });
 
