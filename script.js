@@ -34,7 +34,7 @@ fetch('projects.json')
         return {
           color: hasProject ? '#555' : 'transparent', // Border color
           weight: hasProject ? 0.6 : 0,               // Border thickness
-          fillColor: hasProject ? '#fde68a' : '#f5f5f5', // soft amber / light gray
+          fillColor: hasProject ? '#bfdbfe' : '#f5f5f5', // soft amber / light gray
           fillOpacity: hasProject ? 0.6 : 0.1
         };
       }
