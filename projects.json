@@ -86,9 +86,19 @@
       "image": "images/aidcuts.png"
     },
     {
+      "country": "South Sudan",
+      "description": " ",
+      "image": "images/subsahara.png"
+    },
+    {
       "country": "Germany",
       "description": " ",
       "image": "images/migration2.png"
+    },
+    {
+      "country": "Germany",
+      "description": " ",
+      "image": "images/germany2.png"
     },
     {
       "country": "Mexico",
@@ -154,7 +164,12 @@
       "country": "Italy",
       "description": " ",
       "image": "images/paul.png"
-    }
+    },
+    {
+      "country": "Eritrea",
+      "description": " ",
+      "image": "images/subsahara.png"
+    },
     
   ]
 }
